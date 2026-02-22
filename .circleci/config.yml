@@ -1,0 +1,14 @@
+version: '2.1'
+
+orbs:
+  linear-release: mishchief/linear-release@0.1.1
+
+workflows:
+  deploy:
+    jobs:
+      - linear-release/deploy:
+          context: linear-release-prod
+          filters:
+            branches:
+              only: main
+          name: sync-linear-release
