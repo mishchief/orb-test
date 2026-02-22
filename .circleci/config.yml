@@ -13,10 +13,10 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - hello
       - linear-release/deploy:
           context: linear-release-prod
           filters:
             branches:
               only: main
           name: sync-linear-release
+      - hello
