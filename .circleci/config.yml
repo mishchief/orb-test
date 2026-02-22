@@ -14,9 +14,6 @@ workflows:
   deploy:
     jobs:
       - linear-release/deploy:
-          context: linear-release-prod
-          filters:
-            branches:
-              only: main
+          context: linear-release-test
           name: sync-linear-release
       - hello
